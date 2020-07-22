@@ -5,25 +5,25 @@ let express             = require("express"),
     mongoose            = require("mongoose"),
     methodOverride      = require("method-override"),
     flash               = require("connect-flash"),
-    
+
     // Seeds
     seedDB              = require("./seeds"),
-    
+
     // Authentication
     passport            = require("passport"),
     LocalStrategy       = require("passport-local"),
-    
+
     // Mongoose Schemas
     Campground          = require("./models/campground"),
     Comment             = require("./models/comment"),
     User                = require("./models/user"),
-    
+
     // Routes
     indexRoutes         = require("./routes/index"),
     commentRoutes       = require("./routes/comments"),
     campgroundsRoutes   = require("./routes/campgrounds");
 
-console.log(process.env.DATABASEURL);
+// console.log(process.env.DATABASEURL);
 
 // Variables set.
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
